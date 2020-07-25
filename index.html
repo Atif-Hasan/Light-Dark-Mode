@@ -7,19 +7,64 @@
     <script src="https://kit.fontawesome.com/9e2173a16a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body id="body" class="dark-mode">
     
-    <section>
+     <section>
         <header>
             <nav>
                 <ul>
                     <li><a href="#" class="header-text">whatthefork.is</a> </li>
-                    <li><span class="closure">a closure</span></li>
-                    <li><span class="icon-change"><i class="fas fa-sun icon_display"></i></span></li>
+                    <li><span class="closure">·  a closure</span></li>
+                    <li><span class="switch-icon"  onclick="toggleDarkLight()"><i class="fas fa-sun icon_display"></i></span></li>
                 </ul>
             </nav>
         </header>
-    </section>
+    </section> 
+    <main>
+    <article>
+        <div class="content-area">
+    <p>
+        Closures are confusing because they are an “invisible” concept.
+    </p>
+
+   <p> When you use an object, a variable, or a function, you do this intentionally. You think: “I’m gonna need a variable here,” and add it to your code.</p>
+   <p>
+    Closures are different. By the time most people approach closures, they have already used them unknowingly many times — and it is likely that this is true for yourself, too. So learning closures is less about understanding a new concept and more about recognizing something you have already been doing for a while.
+</p>
+<p><strong>tl;dr</strong></p>
+<p>
+    You have a closure when <span>a function accesses variables defined outside of it.</span>
+</p>
+<p>
+For example, this code snippet contains a closure:
+</p>
+
+<p class="closure-example">
+    <code>
+        let users = ['Alice', 'Dan', 'Jessica'];<br>
+        let query = 'A';<br>
+        let user = users.filter(user => user.startsWith(query));
+    </code>
+</p>
+
+<p>
+    Notice how user =&gt; user.startsWith(query) is itself a function. It uses the query variable. But the query variable is defined outside of that function. That’s a closure.
+</p>
+<hr>
+<p>	
+    <span>You can stop reading here, if you want.</span> The rest of this article approaches closures in a different way. Instead of explaining what a closure is, it will walk you through the process of discovering closures — like the first programmers did in the 1960s.
+</p>
+
+<hr>
+</div>
+</article>
+
+    
+
+</main>
+
+   
+
 
 
     <script src="app.js"></script>
